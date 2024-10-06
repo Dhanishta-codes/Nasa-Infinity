@@ -1,0 +1,121 @@
+/* Quiz container styling */
+.quiz-container {
+    background-color: #000; /* Solid black background */
+    color: #0b0b0b;
+    font-family: 'Roboto', sans-serif;
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(255, 0, 255, 0.6); /* Neon glow */
+    text-align: center;
+    animation: fadeIn 1s ease-in-out; /* Fade in animation */
+}
+  
+/* Animating the container on load */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+  
+/* Score section */
+.score-section {
+    font-size: 2.5em;
+    margin-top: 20px;
+    color: #ff00ff; /* Neon violet text */
+    animation: glow 1.5s infinite alternate; /* Glowing animation for score */
+}
+  
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px #fefbfe, 0 0 20px #fefbfe, 0 0 30px #fefbfe;
+    }
+    to {
+        text-shadow: 0 0 20px #ff00ff, 0 0 30px #ff00ff, 0 0 40px #ff00ff;
+    }
+}
+  
+/* Question text styling */
+.question-text {
+    font-size: 2em;
+    margin: 20px 0;
+    background: linear-gradient(90deg, rgba(255,0,255,0.3), rgba(0,255,255,0.3)); /* Neon gradient */
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(255, 0, 255, 0.6); /* Subtle neon effect */
+}
+  
+/* Answer buttons */
+.answer-section button {
+    background-color: #ff00ff; /* Neon violet */
+    border: none;
+    border-radius: 10px;
+    padding: 15px 20px;
+    margin: 10px 5px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #000;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s; /* Adding hover effect */
+}
+  
+.answer-section button:hover {
+    transform: scale(1.1); /* Zoom effect on hover */
+    box-shadow: 0 0 15px rgba(255, 0, 255, 1); /* Intense neon glow */
+}
+  
+/* Active state for clicked buttons */
+.answer-section button:active {
+    transform: scale(0.95);
+    box-shadow: 0 0 10px rgba(255, 0, 255, 0.8);
+}
+  
+/* Question counter styling */
+.question-count span {
+    font-size: 1.5em;
+    background-color: #ff00ff; /* Neon violet background */
+    padding: 5px 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(255, 0, 255, 0.8);
+}
+  
+/* Overall animations and fluidity */
+.answer-section {
+    animation: slideIn 0.5s ease-out;
+}
+  
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+  
+.quiz-container button {
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 1px;
+}
+  
+.quiz-container h1, .quiz-container h2 {
+    animation: textGlow 1.5s infinite alternate;
+}
+  
+@keyframes textGlow {
+    from {
+        text-shadow: 0 0 8px #fefbfe;
+    }
+    to {
+        text-shadow: 0 0 18px #ff00ff;
+    }
+}

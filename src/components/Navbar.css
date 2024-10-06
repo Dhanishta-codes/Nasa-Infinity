@@ -1,0 +1,42 @@
+/* src/components/Navbar.css */
+.navbar {
+    display: flex;
+    justify-content: flex-end; /* Align items to the right */
+    align-items: center;
+    padding: 10px 20px;
+    background: black; /* Make the background transparent */
+    backdrop-filter: none; /* Remove any blur effect */
+    border: none; /* Remove any border */
+  }
+  
+  .nav-links {
+    display: flex;
+    justify-content: flex-end; /* Ensure links are aligned to the right */
+    align-items: center;
+    list-style: none;
+  }
+  
+  .nav-links li {
+    margin: 0 20px;
+  }
+  
+  .nav-item {
+    text-decoration: none;
+    color: rgb(250, 248, 248); /* Set text color to black */
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-item:hover {
+    color: #61dafb; /* Change color on hover */
+  }
+  
+  .sign-in {
+    margin-left: 20px; 
+  }
+  
+  .sign-in .nav-item {
+    font-size: 1em;
+    font-weight: bold;
+  }
+  

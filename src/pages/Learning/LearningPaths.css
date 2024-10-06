@@ -1,0 +1,103 @@
+/* src/pages/LearningPaths.css */
+
+/* Set the background image for the entire page */
+body {
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    font-family: 'Poppins', 'Roboto', sans-serif; /* Set font for the entire page */
+    background-image: url('/public/black.jpg'); /* Background image */
+    background-size: cover; /* Cover the entire page */
+    background-repeat: no-repeat; /* Prevent repeating */
+    background-position: center; /* Center the image */
+    color: #ecf0f1; /* Light text */
+}
+
+/* Learning Paths Container */
+.learning-paths-container {
+    padding: 40px;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto; /* Center container */
+}
+
+.learning-paths-container h1 {
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.learning-paths-container p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #95a5a6;
+}
+
+/* Flashcards Grid */
+.flashcards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 20px;
+    margin-bottom: 50px;
+}
+
+/* Flashcards Styling */
+.flashcard {
+    background-color: rgba(52, 73, 94, 0.9); /* Semi-transparent background for better readability */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    color: #ecf0f1;
+    text-align: center;
+}
+
+.flashcard:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+}
+
+.flashcard h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #1abc9c; /* Highlighted color for titles */
+}
+
+.flashcard p {
+    font-size: 16px;
+    color: #bdc3c7;
+}
+
+/* Quiz Section Styling */
+.quiz-section {
+    margin-top: 50px;
+}
+
+.quiz-section h2 {
+    font-size: 30px;
+    color: #ecf0f1;
+    margin-bottom: 20px;
+}
+
+.start-quiz-button {
+    padding: 12px 30px;
+    background-color: #1abc9c;
+    color: #2c3e50;
+    border: none;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.start-quiz-button:hover {
+    background-color: #16a085;
+}
+
+@media (max-width: 768px) {
+    .flashcards-container {
+        grid-template-columns: 1fr; /* 1 column on small screens */
+        gap: 15px;
+    }
+}

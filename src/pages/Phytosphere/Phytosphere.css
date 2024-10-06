@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Poppins:wght@400;500&display=swap');
+
+/* Phytosphere container styling */
+.phytosphere-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #000; /* Black background */
+    color: #ffffff; /* White text */
+    font-family: 'Roboto', sans-serif; /* Modern and minimalist font */
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    text-align: center;
+    padding: 20px;
+    animation: fadeIn 1s ease-in-out; /* Fade-in animation */
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Headings styling */
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #ffffff;
+    text-shadow: 0 0 10px rgba(249, 247, 249, 0.5); /* Subtle glow */
+    font-weight: 500; /* Medium weight for sleek look */
+}
+
+/* Paragraph styling */
+p {
+    font-size: 1.1em;
+    margin-bottom: 40px; /* Increased gap for more whitespace */
+    font-weight: 300; /* Light font for a minimalist feel */
+    line-height: 1.5;
+}
+
+/* Ask Ocean input container */
+.ask-ocean-container {
+    position: relative; /* To position the button */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px; /* Space between input and answer box */
+}
+
+/* Input styling */
+.ask-ocean-input {
+    padding: 15px 20px;
+    font-size: 1.1em;
+    border: 2px solid #ffffff; /* Subtle white border */
+    border-radius: 30px; /* Smoother border-radius */
+    outline: none;
+    margin-right: 10px;
+    width: 350px; /* Wider input for better aesthetics */
+    box-shadow: 0 0 8px rgba(253, 251, 253, 0.5); /* Softer neon glow */
+    background-color: rgba(255, 255, 255, 0.1); /* Transparent background */
+    color: #ffffff; /* White text */
+    transition: box-shadow 0.3s ease, border 0.3s ease; /* Smooth transition */
+    font-weight: 400; /* Normal weight for simplicity */
+}
+
+/* Input hover effect */
+.ask-ocean-input:hover {
+    box-shadow: 0 0 20px rgba(254, 254, 254, 0.7); /* Brighter glow on hover */
+    border: 2px solid #ff00ff; /* Add subtle neon border on hover */
+}
+
+/* Button styling */
+.ask-ocean-button {
+    padding: 15px 30px;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 30px;
+    background-color: #ff00ff; /* Neon violet */
+    color: #000; /* Black text */
+    cursor: pointer;
+    position: absolute; /* Positioned next to the input */
+    right: -5px; /* Adjusted position */
+    box-shadow: 0 0 8px rgba(255, 0, 255, 0.5); /* Neon glow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+/* Button hover effect */
+.ask-ocean-button:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0 0 15px rgba(255, 0, 255, 1); /* Intense glow on hover */
+}
+
+/* Answer box styling */
+.answer-box {
+    margin-top: 40px; /* Increased gap between input and answer box */
+    padding: 15px 30px; /* Padding for better readability */
+    font-size: 1.2em; /* Adjusted font size */
+    font-family: 'Poppins', sans-serif; /* Normalized modern font */
+    font-weight: 400; /* Normal weight for clarity */
+    color: #00ffea; /* Futuristic cyan text */
+    background-color: rgba(0, 0, 0, 0.85); /* Slightly transparent background */
+    border-radius: 12px; /* Rounded corners for sleekness */
+    box-shadow: 0 0 12px rgba(0, 255, 255, 0.6); /* Subtle neon glow */
+    animation: slideIn 0.5s ease-out; /* Slide-in animation */
+    text-align: left; /* Align text for readability */
+    line-height: 1.6; /* Increased line spacing */
+}
+
+/* Slide-in animation for the answer box */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Making the answer concise: line-by-line formatting */
+.answer-box p {
+    margin: 0; /* Remove extra margins */
+    padding: 5px 0; /* Add small padding for spacing between lines */
+}
+
+/* Line separation for the answer text */
+.answer-box p + p {
+    border-top: 1px solid rgba(0, 255, 255, 0.2); /* Subtle line between paragraphs */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .ask-ocean-input {
+        width: 100%; /* Full width on smaller screens */
+    }
+
+    .ask-ocean-button {
+        position: static; /* Position under the input */
+        margin-top: 10px; /* Add some space between input and button */
+    }
+}
